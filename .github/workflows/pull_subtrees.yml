@@ -12,7 +12,7 @@ jobs:
 
       - name: Clone other repository
         env:
-          ACCESS_DATA: { { $secrets.ACCESS_DATA } }
+          ACCESS_DATA: ${{ secrets.ACCESS_DATA }}
         run: |
           git clone https://github.com/kerzendorf-group/kerzendorf-group.github.io.git
           git clone https://github.com/kerzendorf-group/group-data.git
