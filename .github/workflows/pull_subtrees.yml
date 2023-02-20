@@ -11,14 +11,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Clone kerzendorf-group.github.io
-        run: git clone git@github.com:kerzendorf-group/kerzendorf-group.github.io.git
-
-      - name: Clone group-data
-        run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
+        run: git clone git@github.com:kerzendorf-group/kerzendorf-group.github.io.git
+
+      - name: Clone group-data
+        run: |
           git clone git@github.com:kerzendorf-group/group-data.git
 
       - name: Configure git
