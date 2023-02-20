@@ -27,3 +27,10 @@ jobs:
           git add .
           git commit -m "Clone my-other-repo"
           git push
+
+      - name: List items
+        run: |
+          cd kerzendorf-group.github.io
+          ls -a
+          cd ../group-web
+          ls -a
