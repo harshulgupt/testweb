@@ -12,7 +12,7 @@ jobs:
 
       - name: List items
         run: |
-          cd images
+          cd group-data
           ls -a
 
       - name: Clone kerzendorf-group.github.io
