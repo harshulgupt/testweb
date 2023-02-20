@@ -14,7 +14,7 @@ jobs:
         run: |
           cd kerzendorf-group.github.io
           ls -a
-          cd ../group-web
+          cd ../group-data
           ls -a
 
       - name: Clone kerzendorf-group.github.io
