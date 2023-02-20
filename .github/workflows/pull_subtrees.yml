@@ -16,7 +16,7 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-        run: git clone git@github.com:kerzendorf-group/kerzendorf-group.github.io.git
+          git clone git@github.com:kerzendorf-group/kerzendorf-group.github.io.git
 
       - name: Clone group-data
         run: |
