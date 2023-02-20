@@ -10,6 +10,13 @@ jobs:
       - name: Checkout current repository
         uses: actions/checkout@v2
 
+      - name: List items
+        run: |
+          cd kerzendorf-group.github.io
+          ls -a
+          cd ../group-web
+          ls -a
+
       - name: Clone kerzendorf-group.github.io
         run: git clone https://${{ secrets.ACCESS_DATA }}@github.com/kerzendorf-group/kerzendorf-group.github.io.git
 
