@@ -10,14 +10,16 @@ jobs:
       - name: Checkout current repository
         uses: actions/checkout@v2
 
-      - name: Clone other repository
-        env:
-          ACCESS_DATA: ${{ secrets.ACCESS_DATA }}
+      - name: Clone kerzendorf-group.github.io
+        run: git clone https://github.com/kerzendorf-group/kerzendorf-group.github.io.git
+
+      - name: Clone group-data
+        run: git clone https://github.com/kerzendorf-group/group-data.git
+
+      - name: Configure git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git clone https://github.com/kerzendorf-group/kerzendorf-group.github.io.git
-          git clone https://github.com/kerzendorf-group/group-data.git
 
       - name: Commit and push changes
         run: |
